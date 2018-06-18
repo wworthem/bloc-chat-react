@@ -22,11 +22,11 @@ class RoomList extends Component {
       }
   render() {
     return (
-      <div className="RoomList"
+      <div className="RoomList">
       { this.state.rooms.map( (room, index) => (
         <p>Room List, {room} </p>
-      ))}
-       />
+        ))}
+      </div>
       )}
-    )
+    //)
   }
