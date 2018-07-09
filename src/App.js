@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import * as firebase from 'firebase';
 import logo from './logo.svg';
 import './App.css';
 import RoomList from './components/RoomLists';
-import * as firebase from 'firebase';
 
+
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 
   // Initialize Firebase
   var config = {
