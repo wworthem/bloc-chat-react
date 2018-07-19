@@ -5,7 +5,7 @@ import './App.css';
 import RoomList from './components/RoomLists';
 
 
-<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+//<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 
   // Initialize Firebase
   var config = {
@@ -20,6 +20,17 @@ import RoomList from './components/RoomLists';
 
 
 class App extends Component {
+  // copied from RoomList.js...
+  constructor(props) {
+     super(props)
+     this.state = { firebase: firebase };
+
+  // this.state = {
+  //  rooms: []
+  //};
+}
+// END copied from RoomList.js...
+
   render() {
     return (
       <div className="App">
@@ -31,7 +42,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <p className="Room-List">
-          <RoomList/>
+          <RoomList firebase = {firebase}/>
         </p>
       </div>
 
