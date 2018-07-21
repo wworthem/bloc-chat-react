@@ -16,6 +16,7 @@ import RoomList from './components/RoomLists';
     storageBucket: "bloc-chat-d02a4.appspot.com",
     messagingSenderId: "356550783825"
   };
+  
   firebase.initializeApp(config);
 
 
