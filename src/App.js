@@ -16,7 +16,7 @@ import RoomList from './components/RoomLists';
     storageBucket: "bloc-chat-d02a4.appspot.com",
     messagingSenderId: "356550783825"
   };
-  
+
   firebase.initializeApp(config);
 
 
@@ -39,12 +39,13 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p className="Room-List">
+      {/*  <p className="App-intro">
+      //    To get started, edit <code>src/App.js</code> and save to reload.
+      </p> */}
+
+        <div className="Room-List">
           <RoomList firebase = {firebase}/>
-        </p>
+        </div>
       </div>
 
     );
