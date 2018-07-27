@@ -4,7 +4,6 @@ import logo from './logo.svg';
 import './App.css';
 import RoomList from './components/RoomLists';
 
-
 //<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 
   // Initialize Firebase
@@ -21,16 +20,10 @@ import RoomList from './components/RoomLists';
 
 
 class App extends Component {
-  // copied from RoomList.js...
   constructor(props) {
      super(props)
      this.state = { firebase: firebase };
-
-  // this.state = {
-  //  rooms: []
-  //};
 }
-// END copied from RoomList.js...
 
   render() {
     return (
@@ -47,7 +40,6 @@ class App extends Component {
           <RoomList firebase = {firebase}/>
         </div>
       </div>
-
     );
   }
 }
