@@ -19,7 +19,7 @@ class RoomList extends Component {
           this.setState({rooms: this.state.rooms.concat( room )})
         });
       }
-      
+
   render() {
     return (
       <div className="RoomList">
@@ -30,6 +30,14 @@ class RoomList extends Component {
         ))}
         </ul>
       </div>
+
+
+        <form onSubmit= {this.newRoom}>
+         Enter Room Name:<br>
+        <input type="text" name="roomName"><br>
+
+        </form>
+
       )}
     //)
   }
