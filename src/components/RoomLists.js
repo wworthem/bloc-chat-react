@@ -13,14 +13,17 @@ class RoomList extends Component {
      };
 
     this.roomsRef = this.props.firebase.database().ref('rooms');
-    this.createRoom = this.createRoom.bind(this);
+    //this.createRoom = this.createRoom.bind(this);
   }
 
    createRoom(newRoomName) {
-     this.roomsRef.push({
-       name: newRoomName
-      });
+     if (newRoomName !== '') {
+       this.roomsRef.push({
+         name: newRoomName
+        });
+     }
    }
+
    componentDidMount() {
         this.roomsRef.on('child_added', snapshot => {
           //console.log(snapshot);
@@ -38,21 +41,21 @@ class RoomList extends Component {
   render() {
     return (
       <div>
-      <div className="RoomList">
-      <ul>
-      { this.state.rooms.map( (room, index) => (
-        //<li> {room.name} </li>
-        <li key={index}> {room.name} </li>
-        ))}
-        </ul>
-      </div>
-
+        <div className="RoomList">
+          <ul>
+            { this.state.rooms.map( (room, index) =>
+              (
+                //<li> {room.name} </li>
+                <li key={index}> {room.name} </li>
+              ))
+           }
+          </ul>
+        </div>
 
         <form onSubmit= {this.createRoom}>
-        <label for="room">Enter Room Name </label>
-        <input id="room" type="text" name="roomName" value={this.state.value} />
-
-        <input type="submit" value="Submit" onSubmit={ this.createRoom (this.state.value) } />
+          <label for="room">Enter Room Name </label>
+          <input id="room" type="text" name="roomName" value={this.state.value} />
+          <input type="submit" value="Submit" onSubmit={ this.createRoom (this.state.value) } />
 
         </form>
       </div>
