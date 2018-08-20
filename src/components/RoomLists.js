@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+// eslint-disable-next-line 
 import * as firebase from 'firebase';
 
 class RoomList extends Component {
   constructor(props) {
      super(props)
-     this.state = { firebase: firebase };
+
 
      this.state = {
        value: "",

@@ -7,13 +7,14 @@ import RoomList from './components/RoomLists';
 //<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 
   // Initialize Firebase
+  
   var config = {
-    apiKey: "AIzaSyDRC_exg-UWG3gWKeAF7PTvULJLLYKODrA",
-    authDomain: "bloc-chat-d02a4.firebaseapp.com",
-    databaseURL: "https://bloc-chat-d02a4.firebaseio.com",
-    projectId: "bloc-chat-d02a4",
-    storageBucket: "bloc-chat-d02a4.appspot.com",
-    messagingSenderId: "356550783825"
+    apiKey: "AIzaSyBPvjn_VEeTuvOiXnsjAZCOuzgBrJY1i7U",
+    authDomain: "wwbloc-chat.firebaseapp.com",
+    databaseURL: "https://wwbloc-chat.firebaseio.com",
+    projectId: "wwbloc-chat",
+    storageBucket: "wwbloc-chat.appspot.com",
+    messagingSenderId: "124344217648"
   };
 
   firebase.initializeApp(config);
@@ -21,7 +22,8 @@ import RoomList from './components/RoomLists';
 class App extends Component {
   constructor(props) {
      super(props)
-     this.state = { firebase: firebase };
+     this.state = {
+      };
 }
 
   render() {
