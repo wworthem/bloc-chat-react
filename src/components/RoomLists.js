@@ -17,12 +17,13 @@ class RoomList extends Component {
     //this.createRoom = this.createRoom.bind(this);
   }
 
-   createRoom(newRoomName) {
-     if (newRoomName !== '') {
+   createRoom=(event)=> {
+       event.preventDefault()
+  
        this.roomsRef.push({
-         name: newRoomName
+         name: "some text....."
         });
-     }
+     
    }
 
    componentDidMount() {
@@ -56,8 +57,8 @@ class RoomList extends Component {
 
         <form onSubmit= {this.createRoom}>
           <label for="room">Enter Room Name </label>
-          <input id="room" type="text" name="roomName" value={this.state.value} />
-          <input type="submit" value="Submit" onSubmit={ this.createRoom (this.state.value) } />
+          <input id="room" type="text" name="roomName"  />
+          <input type="submit" value="Submit" onSubmit={(event)=>this.createRoom(event)} />
 
         </form>
       </div>
