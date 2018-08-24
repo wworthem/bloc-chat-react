@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// eslint-disable-next-line 
+// eslint-disable-next-line
 import * as firebase from 'firebase';
 
 class RoomList extends Component {
@@ -40,7 +40,8 @@ class RoomList extends Component {
       }
 
   render() {
-    return (
+      return (
+
       <div>
         <div className="RoomList">
           <ul>
