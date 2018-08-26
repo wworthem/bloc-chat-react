@@ -19,11 +19,14 @@ class RoomList extends Component {
 
    createRoom=(event)=> {
        event.preventDefault()
-  
+
+       var textInput= document.getElementById("roomInput");
+       var newRoomName = textInput.value;
+       textInput.value ="";
        this.roomsRef.push({
-         name: "some text....."
+         name: newRoomName
         });
-     
+
    }
 
    componentDidMount() {
@@ -57,13 +60,16 @@ class RoomList extends Component {
 
         <form onSubmit= {this.createRoom}>
           <label for="room">Enter Room Name </label>
-          <input id="room" type="text" name="roomName"  />
+          <input id="roomInput" type="text" name="roomName" placeholder="enter room name" />
           <input type="submit" value="Submit" onSubmit={(event)=>this.createRoom(event)} />
 
         </form>
+
       </div>
       )}
     //)
+
   }
+
 
   export default RoomList
