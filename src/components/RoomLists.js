@@ -39,7 +39,6 @@ class RoomList extends Component {
       }
 
       handleChange(event) {
-
         this.setState({})
       }
 
@@ -51,7 +50,7 @@ class RoomList extends Component {
           <ul>
             { this.state.rooms.map( (room, index) =>
               (
-                //<li> {room.name} </li>
+                
                 <li key={index}> {room.name} </li>
               ))
            }
